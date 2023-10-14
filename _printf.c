@@ -8,7 +8,6 @@
 int _printf(const char *format, ...)
 {
 	int length = 0, a = 0, b = 0;
-	int n;
 
 	spec_func options[] = {
 		{"%c", print_one_char},
@@ -27,20 +26,19 @@ int _printf(const char *format, ...)
 	while (format[b] != '\0')
 	{
 		a = 0;
-		while (options[a].specifier)
+		while (options[a].specifier != NULL)
 		{
 			if (format[b] == *options[a].specifier)
 			{
-				n = options[a].correct_function();
-				length += n;
+				length += options[a].correct_function(characters);
 				break;
 			}
 			a++;
 		}
+		_putchar(format[b]);
 		b++;
 	}
 
-	_putchar('\n');
 	va_end(characters);
 
 	return (length);
