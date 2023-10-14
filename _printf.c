@@ -40,6 +40,7 @@ int _printf(const char *format, ...)
 		b++;
 	}
 
+	_putchar('\n');
 	va_end(characters);
 
 	return (length);
