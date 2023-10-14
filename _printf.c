@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdarg.h>
 
 /**
  * _printf - the main printf function, like a main file
@@ -7,13 +8,13 @@
  */
 int _printf(const char *format, ...)
 {
-	int length = 0, a = 0, b = 0;
+	int a = 0, b = 0, length = 0;
 	int n;
 
 	spec_func options[] = {
 		{"%c", print_one_char},
 		{"%s", print_string},
-		{"%%", print_literal},
+		{"%%", print_percent},
 		{NULL, NULL}
 	};
 
@@ -24,20 +25,20 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	while (format[b] != '\0')
+	while (format && format[a])
 	{
-		a = 0;
-		while (options[a].specifier != NULL)
+		b = 0;
+		while (options[b].specifier)
 		{
-			if (format[b] == *options[a].specifier)
+			if (format[a] == *options[b].specifier)
 			{
-				n = options[a].correct_function();
+				n = options[b].correct_function();
 				length += n;
 				break;
 			}
-			a++;
+			b++;
 		}
-		b++;
+		a++;
 	}
 
 	_putchar('\n');

@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * print_literal - function to print % literal
+ * print_percent - function to print % literal
  *
  * Return: the number of charactes in the string
  */
-int print_literal(void)
+int print_percent(void)
 {
 	/* The value of % in ascii is 37 */
-	_putchar(37);
+	_putchar('%');
 
 	return (1);
 }
