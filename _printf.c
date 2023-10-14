@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[b] == *options[a].specifier)
 			{
-				length += options[a].correct_function(characters);
+				length += options[a].correct_function();
 				break;
 			}
 			a++;
