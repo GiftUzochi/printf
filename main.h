@@ -24,6 +24,6 @@ int _putchar(char c);
 int _printf(const char *format, ...);
 int print_one_char(va_list element);
 int print_string(va_list element);
-int print_literal(va_list element);
+int print_literal(void);
 
 #endif 

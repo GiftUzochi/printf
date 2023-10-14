@@ -35,7 +35,6 @@ int _printf(const char *format, ...)
 			}
 			a++;
 		}
-		_putchar(format[b]);
 		b++;
 	}
 

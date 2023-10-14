@@ -2,12 +2,13 @@
 
 /**
  * print_literal - function to print % literal
- * @element: the va_list element passed in from _printf.c
+ *
  * Return: the number of charactes in the string
  */
-int print_literal(va_list element)
+int print_literal(void)
 {
-	(void)element;
-	_putchar('%');
+	/* The value of % in ascii is 37 */
+	_putchar(37);
+
 	return (1);
 }

@@ -9,7 +9,6 @@
 int print_string(va_list element)
 {
 	char *s;
-	int len;
 	int i = 0, length = 0;
 
 	s = va_arg(element, char *);
@@ -17,9 +16,7 @@ int print_string(va_list element)
 	if (s == NULL)
 		s = "(nil)";
 
-	len = strlen(s);
-
-	while (i < len)
+	while (s[length] != '\0')
 	{
 		_putchar(s[i]);
 		i++;

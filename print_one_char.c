@@ -11,5 +11,6 @@ int print_one_char(va_list element)
 
 	s = va_arg(element, int);
 	_putchar(s);
+
 	return (1);
 }
