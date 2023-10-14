@@ -8,6 +8,7 @@
 int _printf(const char *format, ...)
 {
 	int length = 0, a = 0, b = 0;
+	int n;
 
 	spec_func options[] = {
 		{"%c", print_one_char},
@@ -30,7 +31,8 @@ int _printf(const char *format, ...)
 		{
 			if (format[b] == *options[a].specifier)
 			{
-				length += options[a].correct_function();
+				n = options[a].correct_function();
+				length += n;
 				break;
 			}
 			a++;
