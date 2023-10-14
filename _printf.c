@@ -1,21 +1,17 @@
 #include "main.h"
-#include <stdarg.h>
 
 /**
- * _printf - the main printf function, like a main file
- * @format: structure spec_func to match identifier and function
- * Return: the length of string passed according to rules
+ * _printf - the main printf function
+ * @format: the incoming argument
+ * Return: the length of the string
  */
 int _printf(const char *format, ...)
 {
-	int a = 0, b = 0, length = 0;
-	int n;
+	int a, b, n, length = 0;
 
 	spec_func options[] = {
-		{"%c", print_one_char},
-		{"%s", print_string},
-		{"%%", print_percent},
-		{NULL, NULL}
+		{"%c", print_one_char}, {"%s", print_string},
+		{"%%", print_percent}, {NULL, NULL}
 	};
 
 	va_list characters;
@@ -25,24 +21,28 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	while (format && format[a])
+	for (a = 0; format[a]; a++)
 	{
-		b = 0;
-		while (options[b].specifier)
+		if (format[a] == '%')
 		{
-			if (format[a] == *options[b].specifier)
+			for (b = 0; options[b].specifier; b++)
 			{
-				n = options[b].correct_function();
-				length += n;
-				break;
+				if (format[a + 1] == options[b].specifier[1])
+				{
+					n = options[b].correct_function(characters);
+					length += n;
+					break;
+				}
 			}
-			b++;
+			a++;
 		}
-		a++;
+		else
+		{
+			_putchar(format[a]);
+			length++;
+		}
 	}
 
-	_putchar('\n');
 	va_end(characters);
-
 	return (length);
 }
