@@ -13,16 +13,11 @@
  * @specifier: the specifier required
  * @correct_function: pointer to the function to use
  */
-struct format
+typedef struct format
 {
 	char *specifier;
 	int (*correct_function)();
-};
-
-/**
- * spec_func - new type for format
- */
-typedef struct format spec_func;
+} spec_func;
 
 /* Prototype */
 int _putchar(char c);
