@@ -11,7 +11,7 @@
 /**
  * struct format - collection of every specifier matched to function
  * @specifier: the specifier required
- * @function: pointer to the function to use
+ * @correct_function: pointer to the function to use
  */
 typedef struct format
 {
@@ -33,4 +33,4 @@ int print_hex_lowercase(va_list element);
 int print_hex_uppercase(va_list element);
 int print_binary(va_list element);
 
-#endif 
+#endif
