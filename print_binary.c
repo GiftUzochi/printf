@@ -1,25 +1,34 @@
 #include "main.h"
 /**
  * print_binary - Fxn to convert to binary
- * @b: the va_list element b argument converted to binary printf.c
- * Return: The number in binary
+ * @element: the va_list element b argument converted to binary printf.c
+ * Return: the number in characters printed
  */
 
 int print_binary (va_list element)
 {
-	unsigned int b = va_arg element;
-		unsigned int value = 1;
-		int num = length (98);
-	int b = 0;
-		int i = 1;
-		if (b == 0)
-			_putchar('0')
-				return 1;
-}
-if (int b = 0)
-	_putchar('0');
-{
-for (value = 1, b < 1, b++)
-	_putchar(num[1] + '0');
-}
-return(length);
+	unsigned int b = va_arg element (unsigned int);
+		unsigned int value = 0;
+		int length;
+		int rem;
+		char digits[32];
+		if (value == 0)
+		{
+			_putchar ('0');
+			return (1);
+		}
+		else
+		{
+			while(value > 0)
+			{
+				int rem = value % 2;
+				digits[length] = rem + '0';
+				value /=2;
+				length++;
+			}
+			for (int i = length - 1; i >= 0; i++)
+			{
+				_putchar(digits[i]);
+			}
+		}
+		return length;
