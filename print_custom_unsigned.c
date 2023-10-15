@@ -1,17 +1,17 @@
 #include "main.h"
 
 /**
- * print_unsigned_int - Function to print an unsigned integer
+ * print_custom_unsigned - Custom specifier for signed integers
  * @element: The va_list element passed in from _printf.c
  * Return: The number of characters printed
  */
-int print_unsigned_int(va_list element)
+int print_custom_unsigned(va_list element)
 {
-	int num;
+	unsigned int num;
 	int i = 0, length = 0;
 	int digits[10];
 
-	num = va_arg(element, int);
+	num = va_arg(element, unsigned int);
 
 	if (num == 0)
 	{
@@ -34,3 +34,4 @@ int print_unsigned_int(va_list element)
 
 	return (length);
 }
+

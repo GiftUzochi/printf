@@ -27,5 +27,9 @@ int print_string(va_list element);
 int print_percent(void);
 int print_signed_int(va_list element);
 int print_unsigned_int(va_list element);
+int print_custom_unsigned(va_list element);
+int print_octal(va_list element);
+int print_hex_lowercase(va_list element);
+int print_hex_uppercase(va_list element);
 
 #endif 

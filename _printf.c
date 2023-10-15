@@ -12,7 +12,9 @@ int _printf(const char *format, ...)
 	spec_func options[] = {
 		{"%c", print_one_char}, {"%s", print_string},
 		{"%%", print_percent}, {"%d", print_signed_int},
-		{"%i", print_unsigned_int}, {NULL, NULL}
+		{"%i", print_unsigned_int}, {"%u", print_custom_unsigned},
+		{"%o", print_octal}, {"%x", print_hex_lowercase},
+		{"%X", print_hex_uppercase}, {NULL, NULL}
 	};
 
 	va_list characters;
@@ -21,7 +23,6 @@ int _printf(const char *format, ...)
 
 	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
 		return (-1);
-
 	for (a = 0; format[a]; a++)
 	{
 		if (format[a] == '%')
@@ -43,7 +44,6 @@ int _printf(const char *format, ...)
 			length++;
 		}
 	}
-
 	va_end(characters);
 	return (length);
 }
