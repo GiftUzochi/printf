@@ -25,5 +25,7 @@ int _printf(const char *format, ...);
 int print_one_char(va_list element);
 int print_string(va_list element);
 int print_percent(void);
+int print_signed_int(va_list element);
+int print_unsigned_int(va_list element);
 
 #endif 

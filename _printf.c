@@ -11,7 +11,8 @@ int _printf(const char *format, ...)
 
 	spec_func options[] = {
 		{"%c", print_one_char}, {"%s", print_string},
-		{"%%", print_percent}, {NULL, NULL}
+		{"%%", print_percent}, {"%d", print_signed_int},
+		{"%i", print_unsigned_int}, {NULL, NULL}
 	};
 
 	va_list characters;
