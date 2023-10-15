@@ -14,7 +14,7 @@ int _printf(const char *format, ...)
 		{"%%", print_percent}, {"%d", print_signed_int},
 		{"%i", print_unsigned_int}, {"%u", print_custom_unsigned},
 		{"%o", print_octal}, {"%x", print_hex_lowercase},
-		{"%X", print_hex_uppercase}, {NULL, NULL}
+		{"%X", print_hex_uppercase}, {"%b", print_binary}, {NULL, NULL}
 	};
 
 	va_list characters;
