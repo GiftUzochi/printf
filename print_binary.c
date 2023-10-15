@@ -7,8 +7,8 @@
 
 int print_binary (va_list element)
 {
-	unsigned int value = va_arg element (unsigned int);
-		int length = 0;
+	unsigned int value = va_arg(element unsigned int);
+		int i = 0, length = 0, rem;
 		char digits[32];
 
 		if (value == 0)
@@ -16,18 +16,17 @@ int print_binary (va_list element)
 			_putchar ('0');
 			return (1);
 		}
-		else
-		{
 			while(value > 0)
 			{
-				int rem = value % 2;
-				digits[length] = rem + '0';
+				rem = value % 2;
+				digits[i] = rem + '0';
 				value /=2;
-				length++;
+				i++;
 			}
-			for (int i = length - 1; i >= 0; i--)
+			for (i--; i >= 0; i++)
 			{
 				_putchar(digits[i]);
+				length++;
 			}
+		return (length);
 		}
-		return length;
