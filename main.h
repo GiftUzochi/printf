@@ -31,5 +31,6 @@ int print_custom_unsigned(va_list element);
 int print_octal(va_list element);
 int print_hex_lowercase(va_list element);
 int print_hex_uppercase(va_list element);
+int print_binary(va_list element);
 
 #endif 
