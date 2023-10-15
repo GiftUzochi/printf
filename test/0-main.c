@@ -25,6 +25,8 @@ int main(void)
 	count = _printf("Unsigned integer (%%i): %i\n", num2);
 	printf("Return value: %d\n", count);
 
+	_printf("This is a %s. Hopefully it is %c success. Return %d %i\n", "test", 'a', -1024675839, 1234567890);
+
 	return (0);
 }
 
