@@ -11,13 +11,18 @@
 /**
  * struct format - collection of every specifier matched to function
  * @specifier: the specifier required
- * @function: pointer to the function to use
+ * @correct_function: pointer to the function to use
  */
-typedef struct format
+struct format
 {
 	char *specifier;
 	int (*correct_function)();
-} spec_func;
+};
+
+/**
+ * spec_func - new type for format
+ */
+typedef struct format spec_func;
 
 /* Prototype */
 int _putchar(char c);
@@ -33,4 +38,4 @@ int print_hex_lowercase(va_list element);
 int print_hex_uppercase(va_list element);
 int print_binary(va_list element);
 
-#endif 
+#endif
