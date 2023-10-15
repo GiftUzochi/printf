@@ -7,11 +7,10 @@
 
 int print_binary (va_list element)
 {
-	unsigned int b = va_arg element (unsigned int);
-		unsigned int value = 0;
-		int length;
-		int rem;
+	unsigned int value = va_arg element (unsigned int);
+		int length = 0;
 		char digits[32];
+
 		if (value == 0)
 		{
 			_putchar ('0');
@@ -26,7 +25,7 @@ int print_binary (va_list element)
 				value /=2;
 				length++;
 			}
-			for (int i = length - 1; i >= 0; i++)
+			for (int i = length - 1; i >= 0; i--)
 			{
 				_putchar(digits[i]);
 			}
