@@ -8,43 +8,35 @@
 int print_pointer(va_list element)
 {
 	void *pointer = va_arg(element, void *);
-	char nil[] = "(nil)";
-	int i;
-	unsigned long int value;
 	char buffer[16];
-	int length = 0;
+	unsigned long int value;
+	int i, length = 0;
 
 	if (pointer == NULL)
 	{
-		for (i = 0; nil[i]; i++)
-		{
-			_putchar(nil[i]);
-		}
-		return (5); /* Length of "(nil)" */
+		_putchar('0');
+		_putchar('x');
+		_putchar('0');
+		return (3); /* Length of "0x0" */
 	}
 
 	value = (unsigned long int)pointer;
 
-	if (value == 0)
+	while (value != 0)
 	{
-		_putchar('0');
+		buffer[length] = "0123456789abcdef"[value % 16];
+		value /= 16;
 		length++;
 	}
-	else
-	{
-		while (value != 0)
-		{
-			buffer[length] = "0123456789abcdef"[value % 16];
-			value /= 16;
-			length++;
-		}
 
-		for (i = length - 1; i >= 0; i--)
-		{
-			_putchar(buffer[i]);
-		}
+	_putchar('0');
+	_putchar('x');
+
+	for (i = length - 1; i >= 0; i--)
+	{
+		_putchar(buffer[i]);
 	}
 
-	return (length);
+	return (length + 2); /* Length of "0x" plus the hexadecimal value */
 }
 
