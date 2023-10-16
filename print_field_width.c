@@ -24,27 +24,11 @@ if (format[i] == 'd' || format[i] == 's' || format[i] == 'f')
 	if (format[i] == 'd')
 	{
 		int value = va_arg(args, int);
-		printf("%d", fieldwidth, value);
+		_putchar("%d", fieldwidth, value);
 	}
 	else if (format[i] == "s")
 	{
 		char str = va_arg(args, char);
-		printf("%s", fieldwidth, str);
+		_putchar("%s", fieldwidth, str);
 	}
-	else if (format[i] == "f")
-	{
-		double value = va_arg9args, double);
-		printf("%f", fieldwidth, value);
-	}
-}
-else
-{
-	_putchar(format[i]);
-}
-i++
-}
-va_end(args);
-}
-return 0;
-}
 
