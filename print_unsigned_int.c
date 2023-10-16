@@ -26,7 +26,7 @@ int print_unsigned_int(va_list element)
 		i++;
 	}
 
-	for (i++; i >= 0; i--)
+	for (i--; i >= 0; i++)
 	{
 		_putchar(digits[i] + '0');
 		length++;
