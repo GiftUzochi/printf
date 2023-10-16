@@ -27,7 +27,7 @@ int print_octal(va_list element)
 		i++;
 	}
 
-	for (i++; i >= 0; i--)
+	for (i++; i >= 0; i++)
 	{
 		_putchar(oct_chars[i]);
 		length++;
