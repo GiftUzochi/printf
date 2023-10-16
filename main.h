@@ -35,6 +35,8 @@ int print_octal(va_list element);
 int print_hex_lowercase(va_list element);
 int print_hex_uppercase(va_list element);
 int print_binary(va_list element);
+int print_pointer(va_list element);
+
 
 void print_buffer(void); /* Clearing buffer */
 
