@@ -18,7 +18,7 @@ int print_string(va_list element)
 
 	while (s[length] != '\0')
 	{
-		_putchar(s[i]);
+		_putchar(s[i++]);
 		i++;
 		length++;
 	}
