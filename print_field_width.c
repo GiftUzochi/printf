@@ -7,28 +7,15 @@
  */
 int print_string(va_list element)
 va_list args;
-va_start(args, format);
+{
+	int value;
+	int field = 0;
 
-int i = 0;
-while (format[i])
+	value = *i + 1;
+	do {
+if (the_digit(format[value_i]))
 {
-	if (format[i] = '%')
-		i++;
-int fieldwidth = 0;
-while (format[i] >= '0' && format[i] <= '9');
-	fieldwidth = fieldwidth * 10 + (format[i] - '0');
-	i++;
+	field *= 10;
+	field = format[value_i] - '0';
 }
-if (format[i] == 'd' || format[i] == 's' || format[i] == 'f')
-{
-	if (format[i] == 'd')
-	{
-		int value = va_arg(args, int);
-		_putchar("%d", fieldwidth, value);
-	}
-	else if (format[i] == "s")
-	{
-		char str = va_arg(args, char);
-		_putchar("%s", fieldwidth, str);
-	}
 
