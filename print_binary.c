@@ -22,7 +22,7 @@ int print_binary(va_list element)
 		rem = value % 2;
 		digits[i] = rem + '0';
 		value /= 2;
-		i++;
+		i--;
 	}
 
 	for (i--; i >= 0; i--)
