@@ -8,4 +8,6 @@
 */
 int print_field_width(va_list element)
 {
-
+va_start(args, value);
+int i = 0, j = 1;
+for 
