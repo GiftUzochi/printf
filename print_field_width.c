@@ -6,16 +6,28 @@
  * Return: the number of characters in the string
  */
 int print_string(va_list element)
-va_list args;
 {
-	int value;
-	int field = 0;
+	int curr_i;
+	int width = 0;
 
-	value = *i + 1;
-	do {
-if (the_digit(format[value_i]))
-{
-	field *= 10;
-	field = format[value_i] - '0';
+	for (curr_i = *i + 1; format[curr_i] != '\0'; curr_i++)
+	{
+		if (is_digit(format[curr_i]))
+		{
+			width *= 10;
+			width += format[curr_i] - '0';
+		}
+		else if (format[curr_i] == '*')
+		{
+			curr_i++;
+			width = va_arg(list, int);
+			break;
+		}
+		else
+			break;
+	}
+
+	*i = curr_i - 1;
+
+	return (width);
 }
-
