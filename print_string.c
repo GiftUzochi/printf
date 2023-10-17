@@ -12,10 +12,10 @@ int print_string(va_list element)
 		char *s = va_arg(args, char*);
 
 		char data[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		char alpha[] = "nopqrstuvwxyzabcdefghkijklmNOPQRSTUVWXYZABCDEFGHIJKLM;
+		char alpha[] = "nopqrstuvwxyzabcdefghkijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-		IF (s == NULL)
-			s = "(null)";
+		if (s == NULL),
+			s = ("null");
 		for (i = 0; s[i]; i++)
 		{
 			k = 0;
@@ -24,7 +24,7 @@ int print_string(va_list element)
 				if (s[i] == data[j])
 				{
 					_putchar(alpha[j]);
-					character++;
+					num++;
 				}
 			}
 			return (character);
