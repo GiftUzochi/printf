@@ -8,4 +8,10 @@
 int print_string(va_list element)
 {
 	char *rot13(char *s)
+	{
+		int i;
+		int j;
+		char data[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+			char datarot[] = "NOPQRSTUVMXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghkijklm";
+
 
