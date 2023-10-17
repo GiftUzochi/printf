@@ -1,32 +1,26 @@
 #include "main.h"
 
 /**
- * print_string - function to print string
- * @element: The va_list element passed from _prinf.c
- * Return: The number of character printed
+ * print_string - prints string
+ * @element: the input
+ * Return: number of characters printed
  */
 int print_string(va_list element)
 {
-		int i, j, value = 0;
-		int k = 0;
-		char *s = va_arg(args, char*);
+	char *s;
+	int i = 0, length = 0;
 
-		char data[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-		char alpha[] = "nopqrstuvwxyzabcdefghkijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	s = va_arg(element, char *);
 
-		if (s == NULL),
-			s = ("null");
-		for (i = 0; s[i]; i++)
-		{
-			k = 0;
-			for (j = 0; data[j] && !k; j++)
-			{
-				if (s[i] == data[j])
-				{
-					_putchar(alpha[j]);
-					num++;
-				}
-			}
-			return (character);
-		}
+	if (s == NULL)
+		s = ("null");
 
+	while (s[length] != '\0')
+	{
+		_putchar(s[i]);
+		i++;
+		length++;
+	}
+
+	return (length);
+}

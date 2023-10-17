@@ -19,6 +19,12 @@ int print_hex_uppercase(va_list element)
 		return (1);
 	}
 
+	if (num < 16)
+	{
+		_putchar('0');
+		length++;
+	}
+
 	while (num > 0)
 	{
 		rem = num % 16;

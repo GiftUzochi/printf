@@ -37,9 +37,9 @@ int print_hex_uppercase(va_list element);
 int print_binary(va_list element);
 int print_pointer(va_list element);
 void print_buffer(void);
+int print_s(va_list element);
 int print_field_width(va_list element);
-int print_flag(va_list element);
-int print_reversed_string(va_list element);
-int print_string(va_list element);
+int print_rot(va_list element);
+int print_hex_uppercase_num(unsigned int n);
 
 #endif
