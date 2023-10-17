@@ -6,7 +6,7 @@
  * Return: length of characters printed
  */
 int print_s(va_list element)
-{
+
 	char *c = va_arg(element, char *);
 	int hex_value, length = 0;
 
