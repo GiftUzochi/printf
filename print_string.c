@@ -1,5 +1,5 @@
-i#include "main.h"
-#include <stdio.h>
+#include "main.h"
+
 /**
  * print_string - function to print string
  * @element: The va_list element passed from _prinf.c
