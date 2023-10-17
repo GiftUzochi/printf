@@ -11,7 +11,7 @@ print_octal.c
 print_hex_lowercase.c
 print_hex_uppercase.c
 print_field_width.c
-
+print_binary.c
 
 							Uzochi Gift
 none at the moment
