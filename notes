@@ -15,6 +15,6 @@ print_binary.c
 print_hex_uppercase_num.c
 print_pointer.c
 print_rot.c
-
+print_s.c
 							Uzochi Gift
 none at the moment
