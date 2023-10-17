@@ -18,6 +18,7 @@ int main(void)
 	_printf("Custom _printf: Hex (%%x) - Positive: %x, Negative: %x\n", positive, negative);
 	_printf("Custom _printf: Hex (%%X) - Positive: %X, Negative: %X\n", positive, negative);
 	printf("Hex: %x %X %x %X\n", positive, positive, negative, negative);
+	printf("Oct: %o %o\n", positive, negative);
 	length = _printf("Address of str: %p\n", ptr);
 	_printf("Length: %d\n", length);
 	_printf("%R, done!\n", "Hello, World!");

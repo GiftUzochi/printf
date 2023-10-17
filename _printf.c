@@ -14,8 +14,7 @@ int _printf(const char *format, ...)
 		{"%u", print_custom_unsigned}, {"%o", print_octal}, {"%R", print_rot},
 		{"%x", print_hex_lowercase}, {"%X", print_hex_uppercase},
 		{"%b", print_binary}, {"%p", print_pointer}, {"%#o", print_oct_flag},
-		{"%#x", print_hex_flag}, {"%+d", print_int_flag1},
-		{"% d", print_int_flag2}, {"%r", print_rev_string}, {NULL, NULL}
+		{"%r", print_rev_string}, {NULL, NULL}
 	};
 
 	va_list characters;
