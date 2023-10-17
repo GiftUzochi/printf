@@ -40,6 +40,6 @@ void print_buffer(void);
 int print_field_width(va_list element);
 int print_flag(va_list element);
 int print_reversed_string(va_list element);
-
+int print_string(va_list element);
 
 #endif
