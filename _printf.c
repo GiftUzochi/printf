@@ -8,21 +8,20 @@
 int _printf(const char *format, ...)
 {
 	int a, b, n, length = 0;
-
 	spec_func options[] = {
-		{"%c", print_one_char}, {"%s", print_string},
-		{"%%", print_percent}, {"%d", print_signed_int},
-		{"%i", print_unsigned_int}, {"%u", print_custom_unsigned},
-		{"%o", print_octal}, {"%x", print_hex_lowercase},
-		{"%X", print_hex_uppercase}, {"%b", print_binary},
-		{"%p", print_pointer}, {"%S", print_s}, {"%R", print_rot}, {NULL, NULL}
+		{"%c", print_one_char}, {"%s", print_string}, {"%%", print_percent},
+		{"%d", print_signed_int}, {"%i", print_unsigned_int}, {"%S", print_s},
+		{"%u", print_custom_unsigned}, {"%o", print_octal}, {"%R", print_rot},
+		{"%x", print_hex_lowercase}, {"%X", print_hex_uppercase},
+		{"%b", print_binary}, {"%p", print_pointer}, {"%#o", print_oct_flag},
+		{"%#x", print_hex_flag}, {"%+d", print_int_flag1},
+		{"% d", print_int_flag2}, {"%r", print_rev_string}, {NULL, NULL}
 	};
 
 	va_list characters;
 
 	va_start(characters, format);
-
-	if (format == NULL || (format[0] == '%' && format[1] == '\0'))
+	if (format == NULL)
 		return (-1);
 	for (a = 0; format[a]; a++)
 	{
@@ -39,7 +38,7 @@ int _printf(const char *format, ...)
 			}
 			a++;
 		}
-		else
+		else if (format[a])
 		{
 			_putchar(format[a]);
 			length++;

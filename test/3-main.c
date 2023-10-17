@@ -17,10 +17,11 @@ int main(void)
 	_printf("Custom _printf: Octal (%%o) - Positive: %o, Negative: %o\n", positive, negative);
 	_printf("Custom _printf: Hex (%%x) - Positive: %x, Negative: %x\n", positive, negative);
 	_printf("Custom _printf: Hex (%%X) - Positive: %X, Negative: %X\n", positive, negative);
-	printf("Hexadecimal: %x, %X\n", negative, negative);
+	printf("Hex: %x %X %x %X\n", positive, positive, negative, negative);
 	length = _printf("Address of str: %p\n", ptr);
 	_printf("Length: %d\n", length);
 	_printf("%R, done!\n", "Hello, World!");
+	_printf("%r, done!\n", "Hello, World!");
 	_printf("%S, done!\n", "Best\nSchool");
 
 	return (0);

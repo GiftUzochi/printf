@@ -8,7 +8,7 @@
 int print_rot(va_list element)
 {
 	int i, j, num = 0;
-	char *s = va_arg(element, char*);
+	char *s = va_arg(element, char *);
 
 	char data[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char alpha[] = "nopqrstuvwxyzabcdefghkijklmNOPQRSTUVWXYZABCDEFGHIJKLM";

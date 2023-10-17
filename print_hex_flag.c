@@ -1,16 +1,19 @@
 #include "main.h"
 
 /**
- * print_hex_lowercase - Function to print hex rep in lowercase
+ * print_hex_flag - Function to print hex rep in lowercase
  * @element: The va_list element passed in from _printf.c
  * Return: The number of characters printed
  */
-int print_hex_lowercase(va_list element)
+int print_hex_flag(va_list element)
 {
 	int num = va_arg(element, int);
 	int rem, i = 0, length = 0;
 	char hex_chars[32]; /* Also 32-bit representation */
 
+	_putchar('0');
+	_putchar('x');
+	length += 2;
 	if (num == 0)
 	{
 		_putchar('0');

@@ -41,5 +41,11 @@ int print_s(va_list element);
 int print_field_width(va_list element);
 int print_rot(va_list element);
 int print_hex_uppercase_num(unsigned int n);
+int print_hex_flag(va_list element);
+int print_HEX_flag(va_list element);
+int print_oct_flag(va_list element);
+int print_int_flag1(va_list element);
+int print_int_flag2(va_list element);
+int print_rev_string(va_list element);
 
 #endif
