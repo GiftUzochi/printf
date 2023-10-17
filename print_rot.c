@@ -10,8 +10,8 @@ int print_rot(va_list element)
 	int i, j, num = 0;
 	char *s = va_arg(element, char *);
 
-	char data[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char alpha[] = "nopqrstuvwxyzabcdefghkijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	char alpha_chars[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char rot_chars[] = "nopqrstuvwxyzabcdefghkijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
 	if (s == NULL)
 		s = ("null");
@@ -20,9 +20,9 @@ int print_rot(va_list element)
 	{
 		for (j = 0; j < 52; j++)
 		{
-			if (s[i] == data[j])
+			if (s[i] == alpha_chars[j])
 			{
-				_putchar(alpha[j]);
+				_putchar(rot_chars[j]);
 				num++;
 				break;
 			}
