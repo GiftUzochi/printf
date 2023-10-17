@@ -7,24 +7,26 @@ i#include "main.h"
  */
 int print_string(va_list element)
 {
-	char *rot13(char *s)
-	{
-		int i;
-		int j;
-		char data[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-			char datarot[] = "NOPQRSTUVMXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghkijklm";
+		int i, j, value = 0;
+		int k = 0;
+		char *s = va_arg(args, char*);
 
-			for (i = 0; s[i] = != '\0'; i++)
+		char data[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		char alpha[] = "nopqrstuvwxyzabcdefghkijklmNOPQRSTUVWXYZABCDEFGHIJKLM;
+
+		IF (s == NULL)
+			s = "(null)";
+		for (i = 0; s[i]; i++)
+		{
+			k = 0;
+			for (j = 0; data[j] && !k; j++)
 			{
-				for (j = 0; j < 52; j++)
+				if (s[i] == data[j])
 				{
-					if (s[i] == data1[j])
-					{
-						s[i] = datarot[j];
-						break;
-					}
+					_putchar(alpha[j]);
+					character++;
 				}
 			}
-			return(*s);
-	}
+			return (character);
+		}
 
