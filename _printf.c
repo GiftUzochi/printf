@@ -15,7 +15,7 @@ int _printf(const char *format, ...)
 		{"%i", print_unsigned_int}, {"%u", print_custom_unsigned},
 		{"%o", print_octal}, {"%x", print_hex_lowercase},
 		{"%X", print_hex_uppercase}, {"%b", print_binary},
-		{"%p", print_pointer}, {NULL, NULL}
+		{"%p", print_pointer}, {"%r", print_reversed_string}, {NULL, NULL}
 	};
 
 	va_list characters;
