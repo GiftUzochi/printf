@@ -19,5 +19,8 @@ print_s.c
 print_int_flag1.c
 print_int_flag2.c
 print_rev_string.c
+print_hex_flag.c
+print_HEX_flag.c
+
 							Uzochi Gift
 none at the moment
