@@ -10,7 +10,7 @@ int print_pointer(va_list element)
 	void *pointer = va_arg(element, void *);
 	char buffer[16];
 	unsigned long int value;
-	int j, length = 0;
+	int i, length = 0;
 
 	if (pointer == NULL)
 	{
