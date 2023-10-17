@@ -16,7 +16,8 @@ print_hex_uppercase_num.c
 print_pointer.c
 print_rot.c
 print_s.c
-print_int_flag1
-print_int_flag2
+print_int_flag1.c
+print_int_flag2.c
+print_rev_string.c
 							Uzochi Gift
 none at the moment
